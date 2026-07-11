@@ -1,0 +1,651 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+.nav-logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;          /* Space between logo and text */
+    white-space: nowrap;
+}
+
+.logo{
+    height: 50px;       /* Adjust to 30px if still large */
+    width: auto;
+    flex-shrink: 0;     /* Prevent logo from shrinking into the text */
+}
+
+.nav-logo span{
+    font-family: Cinzel, serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #B88B32;
+    line-height: 1;
+}
+
+
+body{
+
+font-family:'Poppins',sans-serif;
+
+background:
+linear-gradient(
+180deg,
+#F8F6F1,
+#FCFBF8,
+#F5F3EE
+);
+
+color:#1E293B;
+
+overflow-x:hidden;
+
+line-height:1.8;
+
+}
+
+/* AURAS */
+
+.aura1{
+
+position:fixed;
+
+width:850px;
+height:850px;
+
+background:#B8E3E3;
+
+filter:blur(260px);
+
+top:-300px;
+left:-300px;
+
+opacity:.45;
+
+z-index:-2;
+
+animation:float 12s ease-in-out infinite;
+
+}
+
+.aura2{
+
+position:fixed;
+
+width:850px;
+height:850px;
+
+background:#F2D6A2;
+
+filter:blur(260px);
+
+bottom:-300px;
+right:-300px;
+
+opacity:.4;
+
+z-index:-2;
+
+animation:float 14s ease-in-out infinite;
+
+}
+
+/* NAVBAR */
+
+.navbar{
+
+    position: fixed;
+
+    top: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 90%;
+    max-width: 1100px;
+
+    min-height: 100px;      /* Increased height */
+    padding: 18px 30px;    /* More vertical padding */
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255,255,255,.55);
+
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,.35);
+
+    border-radius: 20px;
+
+    z-index: 999;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,.08);
+
+}
+
+.nav-logo{
+
+font-family:Cinzel;
+
+font-size:1.4rem;
+
+font-weight:700;
+
+color:#B88B32;
+
+}
+
+.nav-links{
+
+display:flex;
+gap:25px;
+
+}
+
+.nav-links a{
+
+text-decoration:none;
+
+color:#475569;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+color:#B88B32;
+
+}
+
+/* HEADER */
+
+header{
+
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:0 20px;
+
+}
+
+h1{
+
+font-family:Cinzel;
+
+font-size:7rem;
+
+color:#B88B32;
+
+margin-bottom:10px;
+
+}
+
+.edition{
+
+letter-spacing:4px;
+
+color:#B88B32;
+
+text-transform:uppercase;
+
+margin-bottom:10px;
+
+font-size:.9rem;
+
+}
+
+.tagline{
+
+font-size:1.15rem;
+
+letter-spacing:3px;
+
+color:#475569;
+
+margin-bottom:30px;
+
+}
+
+/* BUTTON */
+
+.btn{
+
+padding:16px 40px;
+
+background:
+linear-gradient(
+135deg,
+#D8B36A,
+#E7C164
+);
+
+color:#1E293B;
+
+text-decoration:none;
+
+font-weight:600;
+
+border-radius:999px;
+
+box-shadow:
+0 10px 30px rgba(231,193,100,.25);
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-4px);
+
+}
+
+/* COUNTDOWN */
+
+.countdown-section{
+
+position:relative;
+
+background:
+url("unnamed.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+background-attachment:fixed;
+
+min-height:750px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+margin:0 5% 120px;
+
+border-radius:35px;
+
+overflow:hidden;
+
+}
+
+.countdown-overlay{
+
+position:absolute;
+
+inset:0;
+
+background:
+rgba(15,23,42,.55);
+
+backdrop-filter:blur(2px);
+
+}
+
+.countdown-content{
+
+position:relative;
+
+z-index:2;
+
+width:90%;
+max-width:700px;
+
+padding:80px 60px;
+
+background:
+rgba(255,255,255,.12);
+
+backdrop-filter:blur(18px);
+
+border:
+1px solid rgba(255,255,255,.25);
+
+border-radius:35px;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.15);
+
+text-align:center;
+
+}
+
+.countdown-section h2{
+
+color:white;
+
+font-size:2.5rem;
+
+margin-bottom:20px;
+
+font-family:Cinzel;
+
+}
+
+.countdown-section p{
+
+color:white;
+
+letter-spacing:2px;
+
+}
+
+#countdown{
+
+font-size:4rem;
+
+font-weight:700;
+
+font-family:Cinzel;
+
+color:#E7C164;
+
+margin:25px 0;
+
+text-shadow:
+0 5px 20px rgba(0,0,0,.35);
+
+}
+
+/* SECTIONS */
+
+section{
+
+padding:100px 12%;
+
+position:relative;
+
+}
+
+section::after{
+
+content:"";
+
+position:absolute;
+
+bottom:0;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:250px;
+
+height:2px;
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+#D8B36A,
+transparent
+);
+
+}
+
+/* SECTION COLORS */
+
+.about-section{
+
+background:
+rgba(255,255,255,.20);
+
+}
+
+.regular-section{
+
+background:
+rgba(255,255,255,.45);
+
+}
+
+.junior-section{
+
+background:
+rgba(184,227,227,.12);
+
+}
+
+.prizes{
+
+background:
+
+linear-gradient(
+135deg,
+rgba(216,179,106,.15),
+rgba(255,255,255,.55)
+);
+
+}
+
+.resources-section{
+
+background:
+rgba(242,214,162,.12);
+
+}
+
+.contact-section{
+
+background:
+rgba(255,255,255,.25);
+
+}
+
+/* HEADINGS */
+
+h2{
+
+font-family:Cinzel;
+
+font-size:2.2rem;
+
+color:#B88B32;
+
+margin-bottom:30px;
+
+}
+
+/* GRID */
+
+.grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+/* CARDS */
+
+.card{
+
+background:
+rgba(255,255,255,.78);
+
+padding:30px;
+
+border-radius:24px;
+
+border:
+1px solid rgba(184,139,50,.15);
+
+backdrop-filter:blur(20px);
+
+box-shadow:
+0 10px 35px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.card:hover{
+
+transform:
+translateY(-10px);
+
+box-shadow:
+0 20px 50px rgba(0,0,0,.12);
+
+}
+
+.card h3{
+
+color:#B88B32;
+
+margin-bottom:10px;
+
+}
+
+.card p{
+
+color:#475569;
+
+}
+
+/* LINKS */
+
+.resource-link,
+.insta-link{
+
+text-decoration:none;
+
+color:#B88B32;
+
+font-weight:600;
+
+}
+
+.resource-link:hover,
+.insta-link:hover{
+
+color:#5FA7A7;
+
+}
+
+/* FOOTER */
+
+footer{
+
+padding:60px;
+
+text-align:center;
+
+color:#64748B;
+
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#D8B36A;
+
+border-radius:999px;
+
+}
+
+/* ANIMATION */
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-20px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.nav-links{
+
+display:none;
+
+}
+
+h1{
+
+font-size:4rem;
+
+}
+
+#countdown{
+
+font-size:2.5rem;
+
+}
+
+.countdown-content{
+
+padding:50px 30px;
+
+}
+
+section{
+
+padding:80px 8%;
+
+}
+
+}
+
+@media(max-width:600px){
+
+h1{
+
+font-size:3rem;
+
+}
+
+.tagline{
+
+font-size:1rem;
+
+}
+
+}
