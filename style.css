@@ -264,80 +264,45 @@ transform:translateY(-4px);
 /* COUNTDOWN */
 
 .countdown-section{
+    width: 100%;
+    min-height: 750px;
 
-position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-background:
-url("unnamed.jpg");
+    margin: 0 0 120px;
+    padding: 0 20px; /* Prevents touching screen edges on mobile */
 
-background-size:cover;
+    background: linear-gradient(
+        135deg,
+        #F7F4EC,
+        #F2E7CF,
+        #E7D4A2
+    );
 
-background-position:center;
-
-background-repeat:no-repeat;
-
-background-attachment:fixed;
-
-min-height:750px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-margin:0 5% 120px;
-
-border-radius:35px;
-
-overflow:hidden;
-
+    overflow: hidden;
 }
-
 .countdown-overlay{
-
-position:absolute;
-
-inset:0;
-
-background:
-rgba(15,23,42,.55);
-
-backdrop-filter:blur(2px);
-
+    display:none;
 }
-
 .countdown-content{
+    width: 100%;
+    max-width: 700px;
 
-position:relative;
+    padding: 80px 60px;
 
-z-index:2;
+    background: rgba(255,255,255,.75);
+    backdrop-filter: blur(20px);
 
-width:90%;
-max-width:700px;
+    border: 1px solid rgba(184,139,50,.2);
+    border-radius: 35px;
 
-padding:80px 60px;
-
-background:
-rgba(255,255,255,.12);
-
-backdrop-filter:blur(18px);
-
-border:
-1px solid rgba(255,255,255,.25);
-
-border-radius:35px;
-
-box-shadow:
-0 20px 60px rgba(0,0,0,.15);
-
-text-align:center;
-
+    text-align: center;
 }
-
 .countdown-section h2{
 
-color:white;
+color:#B88B32;
 
 font-size:2.5rem;
 
@@ -348,28 +313,19 @@ font-family:Cinzel;
 }
 
 .countdown-section p{
-
-color:white;
-
-letter-spacing:2px;
-
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: #B88B32;
+    letter-spacing: 2px;
+    font-weight: 600;
 }
 
 #countdown{
-
-font-size:4rem;
-
-font-weight:700;
-
-font-family:Cinzel;
-
-color:#E7C164;
-
-margin:25px 0;
-
-text-shadow:
-0 5px 20px rgba(0,0,0,.35);
-
+    font-size: 4rem;
+    font-weight: 200;
+    font-family: 'Cinzel', serif;
+    color: #B88B32;
+    margin: 25px 0;
 }
 
 /* SECTIONS */
